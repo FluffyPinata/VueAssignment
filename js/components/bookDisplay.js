@@ -14,8 +14,8 @@ app.component('book-display', {
         <a class = "list-group-item list-group-item-action active" :href="this.bookObj.selfLink"> {{this.bookObj.volumeInfo.title}}</a>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.authors}}</li>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
-        <li class = "list-group-item" v-if="typeof this.bookObj.imageLinks.smallThumbnail !== undefined">
-        	<img src="this.bookObj.imageLinks.smallThumbnail">
+        <li class = "list-group-item" v-if="typeof this.bookObj.volumeInfo.imageLinks.smallThumbnail !== undefined">
+        	<img src="this.bookObj.volumeInfo.imageLinks.smallThumbnail">
         </li>
         </ul>`,
 
