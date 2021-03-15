@@ -12,7 +12,9 @@ app.component('book-display', {
 		/*html*/
 		`<ul class = "col-sm-12 col-md-6 col-xl-4">
         <a class = "list-group-item list-group-item-action active" :href="this.bookObj.selfLink"> {{this.bookObj.volumeInfo.title}}</a>
-        <li class = "list-group-item">{{this.bookObj.volumeInfo.authors}}</li>
+        <li class = "list-group-item" v-if = "this.bookObj.volumeInfo.authors !== undefined">
+        	<p>{{this.bookObj.volumeInfo.authors}}</p>
+        </li>
         <li class = "list-group-item" v-if = "this.bookObj.volumeInfo.publisher !== undefined or this.bookObj.volumeInfo.publishedDate !== undefined">
         	<p v-if = "this.bookObj.volumeInfo.publisher !== undefined">Publisher: {{this.bookObj.volumeInfo.publisher}}</p>
         	<p v-if = "this.bookObj.volumeInfo.publishedDate !== undefined">Published Date: {{this.bookObj.volumeInfo.publishedDate}}</p>
