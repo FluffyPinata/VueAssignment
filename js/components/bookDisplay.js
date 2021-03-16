@@ -15,7 +15,7 @@ app.component('book-display', {
         <li class = "list-group-item" v-if = "this.bookObj.volumeInfo.authors.length !=== 0">
         	<p>Authors: {{this.bookObj.volumeInfo.authors}}</p>
         </li>
-        <li class = "list-group-item" v-if = "this.bookObj.volumeInfo.publisher !== undefined or this.bookObj.volumeInfo.publishedDate !== undefined">
+        <li class = "list-group-item">
         	<p v-if = "this.bookObj.volumeInfo.publisher !== undefined">Publisher: {{this.bookObj.volumeInfo.publisher}}</p>
         	<p v-if = "this.bookObj.volumeInfo.publishedDate !== undefined">Published Date: {{this.bookObj.volumeInfo.publishedDate}}</p>
         </li>
