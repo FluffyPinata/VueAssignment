@@ -33,7 +33,7 @@ app.component('book-display', {
                 return null;
             }
 
-        }
+        },
 
         insertImage() {
     		if (this.book != null) {
