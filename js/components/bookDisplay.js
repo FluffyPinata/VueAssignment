@@ -16,8 +16,8 @@ app.component('book-display', {
         	<p>Authors: {{this.bookObj.volumeInfo.authors}}</p>
         </li>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
-        <li class = "list-group-item" v-if="this.bookObj.volumeInfo.imageLinks.medium !== undefined">
-        	<img src="this.bookObj.volumeInfo.imageLinks.medium">
+        <li class = "list-group-item">
+        	<p>{{this.bookObj.volumeInfo.imageLinks}}</p>
         </li>
         </ul>`,
 
