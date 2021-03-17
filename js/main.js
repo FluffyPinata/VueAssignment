@@ -32,8 +32,8 @@ const app = Vue.createApp({
 			if(this.startingIndex >=20 ){
 			this.startingIndex-=20
 			
-			
-		}	
+		
+			}	
 		},
 
         resetPage() {
