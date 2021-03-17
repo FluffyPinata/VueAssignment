@@ -18,7 +18,7 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         <li class = "list-group-item">
         	<p>{{this.bookObj.volumeInfo.imageLinks.thumbnail}}</p>
-        	<img src = "" class = "bookThumbnail">
+        	<img src = "" class = "bookThumbnail" onload="insertImage()"">
         </li>
         </ul>`,
 
@@ -27,15 +27,22 @@ app.component('book-display', {
         bookObj() {
 
             if (this.book != null) {
-            	parsedBook = JSON.parse(this.book);
-            	$("#bookThumbnail").attr('src', parsedBook.volumeInfo.imageLinks.thumbnail);
-                return parsedBook;
+            	return = JSON.parse(this.book);
             }
             else {
                 return null;
             }
 
         }
+    }
+
+    methods: {
+    	insertImage() {
+    		if (this.book != null) {
+    			$("#bookThumbnail").attr('src', parsedBook.volumeInfo.imageLinks.thumbnail);
+    		}
+			
+		}
     }
 
 
