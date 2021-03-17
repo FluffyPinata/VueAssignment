@@ -17,7 +17,7 @@ app.component('book-display', {
         </li>
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         <li class = "list-group-item">
-        	<p>{{this.bookObj.volumeInfo.imageLinks}}</p>
+        	<p>{{this.bookObj.volumeInfo.imageLinks.thumbnail}}</p>
         </li>
         </ul>`,
 
