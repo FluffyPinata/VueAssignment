@@ -34,10 +34,8 @@ app.component('book-display', {
             }
 
         }
-    }
 
-    methods: {
-    	insertImage() {
+        insertImage() {
     		if (this.book != null) {
     			$("#bookThumbnail").attr('src', parsedBook.volumeInfo.imageLinks.thumbnail);
     		}
