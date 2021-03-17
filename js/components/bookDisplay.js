@@ -27,7 +27,7 @@ app.component('book-display', {
         bookObj() {
 
             if (this.book != null) {
-            	return = JSON.parse(this.book);
+            	return JSON.parse(this.book);
             }
             else {
                 return null;
