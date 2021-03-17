@@ -18,10 +18,7 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         <li class = "list-group-item">
         	<p>{{this.bookObj.volumeInfo.imageLinks.thumbnail}}</p>
-        	<script>
-        		$("#bookThumbnail").attr('src', this.bookObj.volumeInfo.imageLinks.thumbnail);
-        	</script>
-        	<img src = "" class = "bookThumbnail">
+        	<img src ={{this.bookObj.volumeInfo.imageLinks.thumbnail}}>
         </li>
         </ul>`,
 
