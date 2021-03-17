@@ -21,7 +21,7 @@ app.component('book-display', {
         	<script>
         		$("#bookThumbnail").attr('src', this.bookObj.volumeInfo.imageLinks.thumbnail);
         	</script>
-        	<img src = "" class = "bookThumbnail"></img>
+        	<img src = "" class = "bookThumbnail">
         </li>
         </ul>`,
 
