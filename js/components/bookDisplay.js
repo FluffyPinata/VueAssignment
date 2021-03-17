@@ -18,7 +18,7 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         <li class = "list-group-item">
         	<p>{{this.bookObj.volumeInfo.imageLinks.thumbnail}}</p>
-        	<img src ={{this.bookObj.volumeInfo.imageLinks.thumbnail}}>
+        	<img src = "" class = "bookThumbnail">
         </li>
         </ul>`,
 
@@ -27,7 +27,9 @@ app.component('book-display', {
         bookObj() {
 
             if (this.book != null) {
-                return JSON.parse(this.book)
+            	parsedBook = JSON.parse(this.book);
+            	$("#bookThumbnail").attr('src', parsedBook.volumeInfo.imageLinks.thumbnail);
+                return parsedBook;
             }
             else {
                 return null;
