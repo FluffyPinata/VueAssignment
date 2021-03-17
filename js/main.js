@@ -33,7 +33,12 @@ const app = Vue.createApp({
 			this.startingIndex-=20
 			
 			
-		}	
+		}
+			if (this.startingIndex == 0) {
+				this.visible=false;
+			} else {
+				this.visible=true;
+			}
 			
 		},
 
