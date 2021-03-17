@@ -18,7 +18,7 @@ app.component('book-display', {
         <li class = "list-group-item">{{this.bookObj.volumeInfo.publisher}}, {{this.bookObj.volumeInfo.publishedDate}}</li>
         <li class = "list-group-item">
         	<p>{{this.bookObj.volumeInfo.imageLinks.thumbnail}}</p>
-        	<img src = "" class = "bookThumbnail" onload="insertImage()"">
+        	<img src = "" class = "bookThumbnail" onload="insertImage()">
         </li>
         </ul>`,
 
